@@ -91,28 +91,45 @@ Uma terceira tela como PLUS, que **completa o funil pela frente**: de quem chega
 
 ---
 
-## 🧠 Decisões de design — com a teoria por trás
+## 🧠 Decisões de design — respostas ao desafio (Entrega 2)
 
-> A documentação completa (diagnóstico → impacto → tensão → autocrítica → referências) está na
-> **[aba Decisões do app](https://thenews-app-redesign.vercel.app/)**. Resumo das lentes usadas:
+> O documento completo, técnico e por estado, está na **[aba Decisões do app](https://thenews-app-redesign.vercel.app/)**.
+> Abaixo, as respostas diretas às três perguntas.
+
+### 1 · Por que essas telas e não outras? Qual o impacto?
+
+Numa newsletter de uso diário, a métrica-norte é **retenção** (D1/D7), não aquisição. Avaliei cada funcionalidade
+por “quanto isto move o retorno diário?”:
+
+| Tela | Decisão | Por quê |
+|---|:-:|---|
+| **Hábito** (streak) | ✅ | Alavanca de retenção nº 1 — traz o usuário de volta todo dia |
+| **Leitura** (edição) | ✅ | Onde se passa mais tempo e o valor é entregue; o loop fecha aqui |
+| **Onboarding** | ➕ bônus | Completa o funil pela frente: da chegada à 1ª leitura (ativação) |
+| Bolão da Copa | ✕ | Sazonal — menos defensável como impacto *real* perene |
+| Perfil / Social | ✕ | Diferencial, mas secundário ao eixo de retenção |
+
+**Impacto esperado (hipóteses):** acoplar *leitura → streak* leva a razão "dias registrados/lidos" a ~100%;
+onboarding até a 1ª edição + Hábito sem muro de zeros elevam o D1; recompensa no fim (peak-end) eleva a intenção de retorno.
+
+### 2 · Cor, hierarquia e tipografia
 
 | Decisão | Princípio | Autor |
 |---|---|---|
-| Streak acoplada à leitura (loop fechado) | **Hook Model** (gatilho→ação→recompensa→investimento) | Eyal |
-| Recompensa concentrada no fim da edição | **Peak-End Rule** | Kahneman |
-| Estado "em risco" com timer | **Aversão à perda** (perdas pesam ~2×) | Kahneman & Tversky |
-| Onboarding como começo, não vazio | **Endowed Progress Effect** | Nunes & Drèze |
-| Streak como herói + um único CTA | **Lei de Fitts** · **Lei de Hick** · **B=MAP** | Fitts · Hick · Fogg |
-| Amarelo reservado ao que importa | **Efeito de isolamento (Von Restorff)** | von Restorff |
+| Amarelo reservado só ao que importa (sequência, progresso, CTA) | **Efeito de isolamento** | von Restorff |
+| Correção do laranja off-brand → amarelo da marca | **Lei de Jakob** (aderência à expectativa) | Nielsen |
+| Streak como herói + um único CTA por tela | **Lei de Fitts · Lei de Hick · B=MAP** | Fitts · Hick · Fogg |
 | Calendário/métricas rebaixados | **Progressive disclosure / Lei de Tesler** | Tesler |
-| Corpo da matéria em serif | **Legibilidade editorial em leitura longa** | Carter (Georgia) |
-| Copy que celebra, não pressiona | **Self-Determination Theory** | Deci & Ryan |
-| Barra de progresso que puxa a conclusão | **Efeito Zeigarnik** | Zeigarnik |
+| Corpo da matéria em serif (Georgia) | **Legibilidade editorial em leitura longa** | Carter |
+| Cuidado visual = percepção de facilidade | **Efeito estética–usabilidade** | Kurosu & Kashimura |
 
-### A tensão mais difícil
-**Engajamento honesto × pressão manipulativa (dark patterns).** Streaks funcionam pela aversão à perda — a mesma
-força que vira chantagem. Resolvi deslocando o eixo de *compulsão* para *competência*: a recompensa vem de **ler**
-(consumir valor), não de executar um ritual; o "em risco" **informa**, não persegue.
+### 3 · A tensão mais difícil
+
+**Engajamento honesto × pressão manipulativa (dark patterns).** Streaks funcionam pela **aversão à perda**
+(Kahneman & Tversky — perdas pesam ~2×) — a mesma força que vira chantagem. Resolvi deslocando o eixo de
+*compulsão* para *competência* (**Self-Determination Theory**, Deci & Ryan): a recompensa vem de **ler**
+(consumir valor), não de um ritual; o "em risco" **informa**, não persegue; o onboarding e o estado inicial
+**convidam** em vez de cobrar (**Endowed Progress Effect**).
 
 ---
 
