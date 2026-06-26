@@ -186,7 +186,7 @@ npm run build      # build de produção em dist/
 | Documento de decisões (3 perguntas + autocrítica) | ✅ [aba Decisões](https://thenews-app-redesign.vercel.app/) |
 | **Bônus:** implementação React responsiva | ✅ |
 | **Bônus:** deploy com link público | ✅ [Vercel](https://thenews-app-redesign.vercel.app/) |
-| Arquivo de design (Figma) | ✅ [Figma](https://www.figma.com/design/QG9ApbsQ2SJmAJdmOQMW7b/the-news-%E2%80%94-App-Redesign) — visualização sob senha |
+| Arquivo de design (Figma) | ✅ [Figma](https://www.figma.com/design/QG9ApbsQ2SJmAJdmOQMW7b) |
 
 ---
 

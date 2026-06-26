@@ -8,6 +8,11 @@ import { SCREENS } from './content.js'
 
 const DEFAULT_STATE = { onboarding: 'welcome', habito: 'active', leitura: 'topo' }
 
+const LINKS = {
+  figma: 'https://www.figma.com/design/QG9ApbsQ2SJmAJdmOQMW7b',
+  repo: 'https://github.com/Ftarganski/thenews-app-redesign',
+}
+
 export default function App() {
   const [view, setView] = useState('proto')
   const [screen, setScreen] = useState('habito')
@@ -32,6 +37,15 @@ export default function App() {
           O <strong>Onboarding</strong> entra como bônus, completando o funil — de quem chega até a primeira leitura.
           Cada estado vem com o problema que resolve e os princípios de CX e design que sustentam a decisão.
         </p>
+        <div className="links">
+          <a className="link" href={LINKS.figma} target="_blank" rel="noopener noreferrer">
+            Design no Figma <span aria-hidden>↗</span>
+          </a>
+          <a className="link" href={LINKS.repo} target="_blank" rel="noopener noreferrer">
+            Código no GitHub <span aria-hidden>↗</span>
+          </a>
+        </div>
+
         <div className="viewtabs">
           <button data-active={view === 'proto'} onClick={() => setView('proto')}>Protótipo</button>
           <button data-active={view === 'decisoes'} onClick={() => setView('decisoes')}>Decisões</button>
