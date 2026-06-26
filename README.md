@@ -23,8 +23,9 @@
 > de recompensa que alimenta o hábito.
 
 O **the news** é a maior newsletter de notícias do Brasil (+3M assinantes), com um app de engajamento diário.
-Este projeto redesenha as duas telas de **maior impacto em retenção e clareza**, com protótipo navegável,
-implementação React responsiva e documentação de decisões fundamentada em teoria de design e CX.
+Este projeto redesenha as duas telas de **maior impacto em retenção e clareza** — Hábito e Leitura — e adiciona
+o **Onboarding** como bônus, completando o funil. Tudo com protótipo navegável, implementação React responsiva
+e documentação de decisões fundamentada em teoria de design e CX.
 
 **🔗 App no ar:** https://thenews-app-redesign.vercel.app/
 &nbsp;•&nbsp; abas **Protótipo** (telas + estados) e **Decisões** (raciocínio completo).
