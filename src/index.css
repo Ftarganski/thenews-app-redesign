@@ -101,14 +101,46 @@ img { display: block; max-width: 100%; }
 .chip[data-active="true"] { border-color: var(--ink); background: var(--brand-yellow); color: var(--ink); }
 
 .stage { display: flex; gap: 36px; align-items: flex-start; flex-wrap: wrap; justify-content: center; }
-.note {
-  max-width: 320px; background: #fff; border-radius: var(--r-md); padding: 22px;
-  box-shadow: var(--shadow-card); align-self: stretch;
+
+/* Painel de raciocínio (embasamento de CX e design) */
+.rationale {
+  width: 400px; max-width: 100%; background: #fff; border-radius: var(--r-lg);
+  padding: 26px; box-shadow: var(--shadow-card); align-self: stretch;
+  display: flex; flex-direction: column; gap: 20px;
 }
-.note h4 { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--gray-400); margin-bottom: 10px; }
-.note p { font-size: 14px; line-height: 1.6; color: var(--gray-700); }
-.note strong { color: var(--ink); }
-.note + .note { margin-top: 0; }
+.rationale__top { border-bottom: 1px solid var(--gray-200); padding-bottom: 18px; }
+.rationale__crumb {
+  display: inline-block; font-size: 11px; font-weight: 800; text-transform: uppercase;
+  letter-spacing: .08em; color: var(--ink); background: var(--brand-yellow);
+  padding: 5px 11px; border-radius: 999px;
+}
+.rationale__blurb { margin-top: 12px; font-size: 14px; line-height: 1.55; color: var(--gray-700); }
+
+.rationale__block h5 {
+  font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .07em;
+  color: var(--gray-400); margin-bottom: 8px;
+}
+.rationale__block p { font-size: 14.5px; line-height: 1.6; color: var(--gray-700); }
+.rationale__block--problem { border-left: 3px solid var(--risk); padding-left: 14px; }
+.rationale__block--problem h5 { color: var(--risk); }
+.rationale__block--decision { border-left: 3px solid var(--success); padding-left: 14px; }
+.rationale__block--decision h5 { color: var(--success); }
+
+.principles { list-style: none; display: flex; flex-direction: column; gap: 13px; margin-top: 4px; }
+.principle { display: flex; flex-direction: column; gap: 3px; padding-left: 16px; position: relative; }
+.principle::before {
+  content: ''; position: absolute; left: 0; top: 7px; width: 7px; height: 7px;
+  border-radius: 50%; background: var(--brand-yellow-deep);
+}
+.principle__name { font-size: 13.5px; font-weight: 800; color: var(--ink); letter-spacing: -.01em; }
+.principle__why { font-size: 13.5px; line-height: 1.5; color: var(--gray-500); }
+
+.shell__foot { font-size: 13px; color: var(--gray-400); }
+.shell__foot code { font-family: ui-monospace, monospace; background: #fff; padding: 2px 7px; border-radius: 6px; font-size: 12px; color: var(--gray-700); }
+
+@media (max-width: 480px) {
+  .rationale { width: 390px; padding: 22px; }
+}
 
 /* ============================================================
    Phone frame

@@ -1,26 +1,9 @@
 import { useState } from 'react'
 import Habito from './screens/Habito.jsx'
 import Leitura from './screens/Leitura.jsx'
+import { SCREENS } from './content.js'
 
-const SCREENS = {
-  habito: {
-    label: 'Hábito',
-    states: [
-      { id: 'empty',  name: 'Novo usuário', note: 'Em vez de um muro de zeros, um convite. A sequência é enquadrada como algo que começa hoje — com os 3 passos do loop ler→registrar→voltar.' },
-      { id: 'active', name: 'Sequência ativa', note: 'A streak vira herói: número grande, chama e o amarelo da marca (não o laranja genérico). Um único CTA conecta direto à leitura.' },
-      { id: 'done',   name: 'Dia concluído', note: 'Depois de ler, o card confirma a manutenção da sequência. O CTA vira estado de sucesso — sem ação manual.' },
-      { id: 'risk',   name: 'Em risco', note: 'Inverte o contraste (fundo escuro) e mostra um timer. Urgência sem alarme — a perda iminente é o gatilho mais forte de retorno.' },
-    ],
-  },
-  leitura: {
-    label: 'Leitura',
-    states: [
-      { id: 'topo',  name: 'Abertura', note: 'Header enxuto (de 5 ícones para o essencial) + barra de progresso proeminente + tempo de leitura. A mini-chama mantém a sequência presente.' },
-      { id: 'lendo', name: 'Lendo', note: 'O corpo passa a serif (Georgia) para leitura longa. Uma faixa discreta mostra que a leitura registra sozinha conforme você avança — adeus banner laranja manual.' },
-      { id: 'fim',   name: 'Fim · recompensa', note: 'O momento de pagamento: terminar a edição fecha o loop e incrementa a streak (+1), conectando de volta à tela de Hábito.' },
-    ],
-  },
-}
+const DEFAULT_STATE = { habito: 'active', leitura: 'topo' }
 
 export default function App() {
   const [screen, setScreen] = useState('habito')
@@ -41,6 +24,7 @@ export default function App() {
         <h1 className="shell__title">App Redesign — Hábito & Leitura</h1>
         <p className="shell__sub">
           Duas telas redesenhadas para fechar o loop de retenção: <strong>ler a edição passa a avançar a sequência automaticamente</strong>.
+          Cada estado abaixo vem com o problema que resolve e os princípios de CX e design que sustentam a decisão.
           Navegue pelos estados ou siga o fluxo tocando nos botões dentro do app.
         </p>
       </header>
@@ -49,7 +33,7 @@ export default function App() {
         <div className="seg">
           {Object.entries(SCREENS).map(([id, s]) => (
             <button key={id} data-active={screen === id}
-              onClick={() => go(id, SCREENS[id].states.find(x => x.id === (id === 'habito' ? 'active' : 'topo'))?.id ?? SCREENS[id].states[0].id)}>
+              onClick={() => go(id, DEFAULT_STATE[id])}>
               {s.label}
             </button>
           ))}
@@ -70,11 +54,40 @@ export default function App() {
             ? <Habito variant={state} onRead={onRead} />
             : <Leitura variant={state} onHabits={onHabits} />}
         </div>
-        <aside className="note">
-          <h4>{current.label} · {activeState.name}</h4>
-          <p>{activeState.note}</p>
+
+        <aside className="rationale">
+          <div className="rationale__top">
+            <span className="rationale__crumb">{current.label} · {activeState.name}</span>
+            <p className="rationale__blurb">{current.blurb}</p>
+          </div>
+
+          <div className="rationale__block rationale__block--problem">
+            <h5>O problema</h5>
+            <p>{activeState.problem}</p>
+          </div>
+
+          <div className="rationale__block rationale__block--decision">
+            <h5>A decisão</h5>
+            <p>{activeState.decision}</p>
+          </div>
+
+          <div className="rationale__block">
+            <h5>Princípios aplicados</h5>
+            <ul className="principles">
+              {activeState.principles.map(([name, why], i) => (
+                <li key={i} className="principle">
+                  <span className="principle__name">{name}</span>
+                  <span className="principle__why">{why}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </aside>
       </div>
+
+      <footer className="shell__foot">
+        Documento completo de decisões e autocrítica no repositório (<code>DECISOES.md</code>).
+      </footer>
     </div>
   )
 }
