@@ -24,10 +24,10 @@ function Bar({ variant }) {
 
 function AutoReg({ variant }) {
   if (variant === 'fim') {
-    return <div className="rd__autoreg rd__autoreg--done"><Check size={15} /> Leitura registrada — sequência mantida</div>
+    return <div className="rd__autoreg rd__autoreg--done"><Check size={15} /> Leitura registrada, sequência mantida</div>
   }
   if (variant === 'lendo') {
-    return <div className="rd__autoreg"><Flame size={14} filled /> Registrando sua leitura conforme você avança — 62%</div>
+    return <div className="rd__autoreg"><Flame size={14} filled /> Registrando sua leitura conforme você avança: 62%</div>
   }
   return null
 }
@@ -39,7 +39,7 @@ function Cover() {
       <div className="rd__greeting">Quinta · 25 jun · 5 min</div>
       <h1 className="rd__covertitle">sorrir para o futuro</h1>
       <p className="rd__intro">
-        bom dia. esperança é acordar sem saber o que vem — e ainda assim estar animado para descobrir.
+        bom dia. esperança é acordar sem saber o que vem, e ainda assim estar animado para descobrir.
         uma mistura de frio na barriga e otimismo que torna o mundo mais leve. com sorriso no rosto e café na mão, vamos nessa.
       </p>
     </div>

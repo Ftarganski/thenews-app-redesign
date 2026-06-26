@@ -153,7 +153,7 @@ img { display: block; max-width: 100%; }
 .copyright__note { display: block; margin-top: 4px; font-size: 11px; color: var(--gray-300); }
 
 @media (max-width: 480px) {
-  .rationale { width: 390px; padding: 22px; }
+  .rationale { width: 100%; max-width: 390px; padding: 22px; }
 }
 
 /* ============================================================
@@ -205,10 +205,11 @@ img { display: block; max-width: 100%; }
 
 @media (max-width: 480px) {
   .shell { padding: 22px 12px 60px; }
+  /* Telefone dimensionado pela ALTURA (svh respeita a barra do navegador mobile),
+     mantendo a proporção — o mockup inteiro cabe na tela, sem cortar nem perder o frame. */
   .phone {
-    width: 100%; max-width: 390px; height: auto; aspect-ratio: 390 / 844;
-    border-radius: 40px;
+    width: auto; height: clamp(520px, 82svh, 780px); aspect-ratio: 390 / 844;
+    max-width: 100%; border-radius: 40px; padding: 10px; margin-inline: auto;
   }
-  .note { max-width: 390px; }
   .shell__title { font-size: 24px; }
 }

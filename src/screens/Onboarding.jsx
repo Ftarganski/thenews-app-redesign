@@ -30,7 +30,7 @@ function Welcome() {
       <div className="ob__center">
         <div className="ob__welcomeLogo"><Logo size={44} gap={12} /></div>
         <h1 className="ob__title" style={{ textAlign: 'center' }}>As notícias que importam, em 5 minutos por dia.</h1>
-        <p className="ob__text" style={{ textAlign: 'center' }}>Um resumo diário, gratuito e sem ruído — do jeito que +3 milhões de pessoas já leem.</p>
+        <p className="ob__text" style={{ textAlign: 'center' }}>Um resumo diário, gratuito e sem ruído, do jeito que +3 milhões de pessoas já leem.</p>
         <div style={{ display: 'flex', justifyContent: 'center' }}>
           <span className="ob__social">
             <span className="ob__avatars"><span /><span /><span /><span /></span>
@@ -50,7 +50,7 @@ function Habit() {
       </div>
       <div className="ob__kicker">O hábito</div>
       <h1 className="ob__title">Toda manhã, uma edição. E uma sequência pra manter.</h1>
-      <p className="ob__text">Às <b>6:06</b>, sua edição chega. Leia e sua <b>sequência</b> cresce. Falhou um dia? Recomeça — sem culpa.</p>
+      <p className="ob__text">Às <b>6:06</b>, sua edição chega. Leia e sua <b>sequência</b> cresce. Falhou um dia? Recomeça sem culpa.</p>
       <div className="ob__streakprev">
         {['S', 'T', 'Q', 'Q', 'S'].map((d, i) => (
           <div className="ob__pday" key={i}>

@@ -15,8 +15,8 @@ const LINKS = {
 
 export default function App() {
   const [view, setView] = useState('proto')
-  const [screen, setScreen] = useState('habito')
-  const [state, setState] = useState('active')
+  const [screen, setScreen] = useState('onboarding')
+  const [state, setState] = useState('welcome')
 
   const go = (sc, st) => { setScreen(sc); setState(st) }
   const current = SCREENS[screen]
@@ -34,7 +34,7 @@ export default function App() {
         <h1 className="shell__title">App Redesign — Onboarding · Hábito · Leitura</h1>
         <p className="shell__sub">
           Telas redesenhadas para fechar o loop de retenção: <strong>ler a edição passa a avançar a sequência automaticamente</strong>.
-          O <strong>Onboarding</strong> entra como bônus, completando o funil — de quem chega até a primeira leitura.
+          O <strong>Onboarding</strong> entra como bônus, completando o funil de quem chega até a primeira leitura.
           Cada estado vem com o problema que resolve e os princípios de CX e design que sustentam a decisão.
         </p>
         <div className="links">
