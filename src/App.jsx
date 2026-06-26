@@ -1,11 +1,13 @@
 import { useState } from 'react'
 import Habito from './screens/Habito.jsx'
 import Leitura from './screens/Leitura.jsx'
+import Decisoes from './Decisoes.jsx'
 import { SCREENS } from './content.js'
 
 const DEFAULT_STATE = { habito: 'active', leitura: 'topo' }
 
 export default function App() {
+  const [view, setView] = useState('proto')
   const [screen, setScreen] = useState('habito')
   const [state, setState] = useState('active')
 
@@ -24,10 +26,15 @@ export default function App() {
         <h1 className="shell__title">App Redesign — Hábito & Leitura</h1>
         <p className="shell__sub">
           Duas telas redesenhadas para fechar o loop de retenção: <strong>ler a edição passa a avançar a sequência automaticamente</strong>.
-          Cada estado abaixo vem com o problema que resolve e os princípios de CX e design que sustentam a decisão.
-          Navegue pelos estados ou siga o fluxo tocando nos botões dentro do app.
+          Cada estado vem com o problema que resolve e os princípios de CX e design que sustentam a decisão.
         </p>
+        <div className="viewtabs">
+          <button data-active={view === 'proto'} onClick={() => setView('proto')}>Protótipo</button>
+          <button data-active={view === 'decisoes'} onClick={() => setView('decisoes')}>Decisões</button>
+        </div>
       </header>
+
+      {view === 'decisoes' ? <Decisoes /> : (<>
 
       <div className="controls">
         <div className="seg">
@@ -86,8 +93,10 @@ export default function App() {
       </div>
 
       <footer className="shell__foot">
-        Documento completo de decisões e autocrítica no repositório (<code>DECISOES.md</code>).
+        Veja o raciocínio completo na aba <strong>Decisões</strong> acima.
       </footer>
+
+      </>)}
     </div>
   )
 }
