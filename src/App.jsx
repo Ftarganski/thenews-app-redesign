@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Habito from './screens/Habito.jsx'
 import Leitura from './screens/Leitura.jsx'
 import Decisoes from './Decisoes.jsx'
+import { Logo } from './Logo.jsx'
 import { SCREENS } from './content.js'
 
 const DEFAULT_STATE = { habito: 'active', leitura: 'topo' }
@@ -22,7 +23,7 @@ export default function App() {
   return (
     <div className="shell">
       <header className="shell__head">
-        <div className="shell__brandmark"><span className="shell__dot" /> the news</div>
+        <Logo size={22} className="shell__brandmark" />
         <h1 className="shell__title">App Redesign — Hábito & Leitura</h1>
         <p className="shell__sub">
           Duas telas redesenhadas para fechar o loop de retenção: <strong>ler a edição passa a avançar a sequência automaticamente</strong>.

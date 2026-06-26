@@ -70,14 +70,8 @@ img { display: block; max-width: 100%; }
   gap: 28px;
 }
 .shell__head { width: 100%; max-width: 1080px; text-align: center; }
-.shell__brandmark {
-  display: inline-flex; align-items: center; gap: 9px;
-  font-weight: 800; font-size: 20px; letter-spacing: -.02em;
-}
-.shell__dot {
-  width: 18px; height: 18px; border-radius: 50%;
-  background: radial-gradient(circle at 35% 30%, var(--brand-yellow), var(--brand-amber));
-}
+.logo__word { font-weight: 800; letter-spacing: -.03em; color: var(--ink); }
+.shell__brandmark .logo__word { font-size: 20px; }
 .shell__title { font-size: 30px; font-weight: 900; letter-spacing: -.03em; margin-top: 14px; }
 .shell__sub { color: var(--gray-500); margin-top: 8px; font-size: 15px; line-height: 1.5; max-width: 620px; margin-inline: auto; }
 

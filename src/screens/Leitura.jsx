@@ -1,5 +1,6 @@
 import './leitura.css'
 import { StatusBar } from '../components/Chrome.jsx'
+import { Logo, LogoMark } from '../Logo.jsx'
 import { Flame, Headphone, Dots, Clock, Check, Share, ArrowRight } from '../icons.jsx'
 
 const PROGRESS = { topo: 6, lendo: 62, fim: 100 }
@@ -9,7 +10,7 @@ function Bar({ variant }) {
   return (
     <div className="rd__bar">
       <div className="rd__row">
-        <div className="rd__wordmark"><span className="rd__dot" /> the news</div>
+        <Logo size={19} gap={7} className="rd__wordmark" />
         <div className="rd__actions">
           <span className="rd__streak"><Flame size={14} filled /> {done ? '13' : '12'}</span>
           <button className="rd__iconbtn"><Headphone size={19} /></button>
@@ -34,7 +35,7 @@ function AutoReg({ variant }) {
 function Cover() {
   return (
     <div className="rd__cover">
-      <div className="rd__coverbrand flame-bg" style={{ color: 'var(--ink)' }}>the news</div>
+      <div className="rd__coverbrand flame-bg"><Logo size={40} gap={12} /></div>
       <div className="rd__greeting">Quinta · 25 jun · 5 min</div>
       <h1 className="rd__covertitle">sorrir para o futuro</h1>
       <p className="rd__intro">
