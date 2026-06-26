@@ -98,6 +98,12 @@ export default function App() {
       </footer>
 
       </>)}
+
+      <footer className="copyright">
+        © 2026 <strong>Francis Targanski</strong> — Todos os direitos reservados.
+        Design e código de autoria do autor; uso, reprodução ou distribuição por terceiros não autorizados.
+        <span className="copyright__note">Redesign conceitual para fins de avaliação. Marcas do “the news” pertencem aos seus titulares.</span>
+      </footer>
     </div>
   )
 }

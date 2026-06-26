@@ -3,6 +3,9 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "author": "Francis Targanski <francis@targanski.com>",
+  "license": "UNLICENSED",
+  "copyright": "© 2026 Francis Targanski. Todos os direitos reservados. Uso por terceiros não autorizado.",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

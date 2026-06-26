@@ -180,6 +180,16 @@ export default function Decisoes() {
           <strong> Tesler</strong>, conservação da complexidade.
         </p>
       </section>
+
+      <section className="doc__section">
+        <h3 style={{ marginTop: 0 }}>Direitos autorais</h3>
+        <p className="doc__refs">
+          <strong>© 2026 Francis Targanski — Todos os direitos reservados.</strong> O design e o código são de
+          autoria exclusiva do autor. É vedado a terceiros usar, copiar, reproduzir, modificar ou distribuir,
+          no todo ou em parte, sem autorização prévia e expressa por escrito. Redesign conceitual produzido para
+          fins de avaliação; marcas do “the news” pertencem aos seus respectivos titulares.
+        </p>
+      </section>
     </div>
   )
 }

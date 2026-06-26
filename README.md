@@ -82,8 +82,8 @@ Header enxuto, progresso proeminente e **registro automático** ao ler. Adeus ba
 
 ## 🧠 Decisões de design — com a teoria por trás
 
-> A documentação completa (diagnóstico → impacto → tensão → autocrítica → referências) está na aba **Decisões**
-> do app e em [`DECISOES.md`](DECISOES.md). Resumo das lentes usadas:
+> A documentação completa (diagnóstico → impacto → tensão → autocrítica → referências) está na
+> **[aba Decisões do app](https://thenews-app-redesign.vercel.app/)**. Resumo das lentes usadas:
 
 | Decisão | Princípio | Autor |
 |---|---|---|
@@ -153,7 +153,7 @@ npm run build      # build de produção em dist/
 | Entregável | Status |
 |---|:-:|
 | Telas redesenhadas com estados principais | ✅ |
-| Documento de decisões (3 perguntas + autocrítica) | ✅ [`DECISOES.md`](DECISOES.md) · aba Decisões |
+| Documento de decisões (3 perguntas + autocrítica) | ✅ [aba Decisões](https://thenews-app-redesign.vercel.app/) |
 | **Bônus:** implementação React responsiva | ✅ |
 | **Bônus:** deploy com link público | ✅ [Vercel](https://thenews-app-redesign.vercel.app/) |
 | Arquivo de design (Figma) | ⏳ em andamento |
@@ -166,3 +166,16 @@ Com mais 1 dia: usar a **fonte de marca real** (Helvetica Now), testar **conteú
 hierarquia, definir a política de **streak freeze** (não punir deslizes), e rodar **A/B no momento de recompensa**
 e no timer de "em risco". A pergunta em aberto: a streak mede *presença* — o próximo passo é premiar **engajamento
 real** (tempo de leitura, scroll-depth, áudio), não só o check diário. Detalhes na aba **Decisões**.
+
+---
+
+## ⚖️ Direitos autorais
+
+> **© 2026 Francis Targanski — Todos os direitos reservados.**
+> O design (telas, layout, sistema de componentes) e o código são de autoria exclusiva de **Francis Targanski**.
+> É **vedado a terceiros** usar, copiar, reproduzir, modificar, distribuir ou criar obras derivadas, no todo ou em
+> parte, sem autorização prévia e expressa por escrito do autor. Ver [`LICENSE`](LICENSE).
+>
+> Redesign **conceitual**, produzido para fins de avaliação em processo seletivo. Marcas, nomes e elementos de
+> identidade do **the news** pertencem aos seus respectivos titulares e são referenciados apenas para demonstração,
+> sem vínculo oficial.
