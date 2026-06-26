@@ -4,7 +4,7 @@
 
 # the news — App Redesign
 
-### Redesign de duas telas do app **the news** — **Hábito** (sequência/retenção) e **Leitura** da edição
+### Redesign do app **the news** — **Hábito** (sequência/retenção) e **Leitura** da edição, + **Onboarding** como bônus
 
 [![Live Demo](https://img.shields.io/badge/▶_Ver_no_ar-thenews--app--redesign.vercel.app-F9D029?style=for-the-badge&labelColor=1D1D1D)](https://thenews-app-redesign.vercel.app/)
 
@@ -77,6 +77,17 @@ Header enxuto, progresso proeminente e **registro automático** ao ler. Adeus ba
 </table>
 
 > No protótipo, os botões dentro do app seguem o **fluxo conectado**: CTA "Ler edição" → Leitura → recompensa → volta ao Hábito.
+
+### ➕ Bônus — Onboarding (4 estados)
+
+Uma terceira tela como PLUS, que **completa o funil pela frente**: de quem chega até a primeira leitura — o *aha moment* que inicia a sequência.
+
+- **Boas-vindas** — abertura de marca + proposta de valor única
+- **O hábito** — enquadra a expectativa (edição às 6:06 + sequência) antes de começar
+- **Interesses** — personalização rápida (micro-investimento gera propriedade)
+- **Pronto** — opt-in de notificação + CTA direto para a 1ª edição
+
+> Narrativa completa: `Onboarding (nasce o hábito) → Hábito (mantém) → Leitura (entrega valor e credita a streak)`.
 
 ---
 
@@ -152,7 +163,8 @@ npm run build      # build de produção em dist/
 
 | Entregável | Status |
 |---|:-:|
-| Telas redesenhadas com estados principais | ✅ |
+| Telas redesenhadas com estados principais (mín. 2) | ✅ **3 telas** |
+| **PLUS:** Onboarding (funil de ativação) | ✅ |
 | Documento de decisões (3 perguntas + autocrítica) | ✅ [aba Decisões](https://thenews-app-redesign.vercel.app/) |
 | **Bônus:** implementação React responsiva | ✅ |
 | **Bônus:** deploy com link público | ✅ [Vercel](https://thenews-app-redesign.vercel.app/) |

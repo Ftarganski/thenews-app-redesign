@@ -3,6 +3,57 @@
 // princípios (a teoria que sustenta a decisão, com autor).
 
 export const SCREENS = {
+  onboarding: {
+    label: 'Onboarding',
+    blurb: 'Onde o hábito nasce. O onboarding fecha o funil pela frente: enquadra a expectativa (edição diária + sequência) e leva o novo usuário à primeira leitura — o “aha moment” — no menor caminho possível.',
+    states: [
+      {
+        id: 'welcome',
+        name: 'Boas-vindas',
+        problem: 'Apps de notícia costumam jogar o usuário direto no conteúdo ou num cadastro longo, sem comunicar o valor central. Quem não entende o “porquê” em segundos, sai.',
+        decision: 'Uma abertura de marca enxuta com uma única promessa clara — “as notícias que importam, em 5 minutos por dia” — e um CTA. Nenhuma fricção antes de comunicar o valor.',
+        principles: [
+          ['Efeito estética–usabilidade — Kurosu & Kashimura', 'a primeira impressão calibra a percepção de facilidade e confiança no produto inteiro.'],
+          ['Proposta de valor única', 'comunicar o benefício central em segundos é o que reduz o abandono na primeira tela.'],
+          ['Efeito Von Restorff', 'marca (amarelo + logo) ancora o reconhecimento desde o primeiro frame.'],
+        ],
+      },
+      {
+        id: 'habit',
+        name: 'O hábito',
+        problem: 'A funcionalidade que retém — a sequência — só era descoberta depois. O usuário não chegava sabendo que existe um hábito a formar, nem quando.',
+        decision: 'Já no onboarding enquadro a expectativa: “toda manhã, às 6:06, uma edição; leia e mantenha sua sequência”. E desarmo a culpa: falhou, recomeça. O hábito é apresentado antes de começar.',
+        principles: [
+          ['Implementation Intentions — Gollwitzer', 'associar a ação a um gatilho específico (“todo dia às 6:06”) aumenta drasticamente a adesão a um hábito.'],
+          ['Hook Model — gatilho — Eyal', 'o onboarding instala o gatilho externo (a edição diária) que vai disparar os ciclos de hábito.'],
+          ['Fresh Start Effect — Dai & Milkman', 'enquadrar como “comece hoje” aproveita o marco temporal para iniciar o comportamento.'],
+        ],
+      },
+      {
+        id: 'interests',
+        name: 'Interesses',
+        problem: 'Sem personalização, o primeiro feed é genérico; com personalização longa demais, o usuário desiste no meio (paradoxo da escolha).',
+        decision: 'Uma seleção rápida de temas em chips, com opções agrupadas e limitadas. Investimento mínimo que gera senso de propriedade sobre o conteúdo — sem virar formulário.',
+        principles: [
+          ['IKEA Effect / Endowment', 'o pequeno esforço de escolher gera apego ao resultado: o feed passa a ser “meu”.'],
+          ['Commitment & Consistency — Cialdini', 'um micro-compromisso inicial aumenta a probabilidade de o usuário continuar engajado.'],
+          ['Lei de Hick', 'limitar e agrupar as opções evita a sobrecarga de escolha que paralisa.'],
+        ],
+      },
+      {
+        id: 'ready',
+        name: 'Pronto',
+        problem: 'Muitos onboardings terminam num “pronto” vazio, longe do valor — e o usuário fecha o app sem nunca viver o momento que o faria voltar.',
+        decision: 'O fechamento leva direto à primeira leitura (“sua primeira edição te espera”), com o opt-in de notificação no mesmo passo. O caminho até o valor é o mais curto possível.',
+        principles: [
+          ['Time-to-Value / “Aha Moment”', 'quanto antes o usuário vive o valor central (ler a edição), maior a ativação e a retenção.'],
+          ['Goal-Gradient + Efeito Zeigarnik', '“falta 1 passo” e a tarefa quase concluída puxam para a ação final.'],
+          ['Peak-End Rule — Kahneman', 'terminar o onboarding com uma vitória e a promessa da sequência deixa memória positiva.'],
+        ],
+      },
+    ],
+  },
+
   habito: {
     label: 'Hábito',
     blurb: 'A tela que fabrica o hábito. Numa newsletter diária, a retenção é o produto — então a sequência precisa ser a protagonista, e o caminho para mantê-la, óbvio.',

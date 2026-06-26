@@ -1,0 +1,70 @@
+/* ===================== Tela Onboarding ===================== */
+.ob { display: flex; flex-direction: column; height: 100%; padding: 8px 26px 30px; }
+
+.ob__bar { display: flex; align-items: center; justify-content: space-between; padding: 6px 0 22px; flex: none; }
+.ob__dots { display: flex; gap: 6px; }
+.ob__dot { width: 8px; height: 8px; border-radius: 999px; background: var(--gray-200); transition: .25s; }
+.ob__dot[data-on="true"] { width: 22px; background: var(--brand-yellow-deep); }
+.ob__skip { font-size: 13px; font-weight: 700; color: var(--gray-400); }
+
+.ob__body { flex: 1; display: flex; flex-direction: column; }
+.ob__center { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+
+.ob__art { display: flex; justify-content: center; margin-bottom: 30px; }
+.ob__orb {
+  width: 120px; height: 120px; border-radius: 50%; display: grid; place-items: center;
+  box-shadow: var(--shadow-hero); color: var(--ink);
+}
+.ob__orb--flame { color: var(--brand-ember); }
+
+.ob__kicker { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; color: var(--brand-yellow-deep); margin-bottom: 12px; }
+.ob__title { font-size: 30px; line-height: 1.12; font-weight: 900; letter-spacing: -.03em; color: var(--ink); }
+.ob__text { font-size: 16px; line-height: 1.55; color: var(--gray-500); margin-top: 14px; font-weight: 500; }
+.ob__text b { color: var(--ink); font-weight: 800; }
+
+/* welcome */
+.ob__welcomeLogo { display: flex; justify-content: center; margin-bottom: 22px; }
+.ob__social { display: inline-flex; align-items: center; gap: 8px; margin-top: 20px; font-size: 13.5px; font-weight: 700; color: var(--gray-500); }
+.ob__avatars { display: flex; }
+.ob__avatars span { width: 26px; height: 26px; border-radius: 50%; border: 2px solid #fff; margin-left: -8px; background: linear-gradient(135deg,#FFD23F,#FF9410); }
+.ob__avatars span:first-child { margin-left: 0; }
+
+/* habit — preview da streak */
+.ob__streakprev { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 26px; }
+.ob__pday { display: flex; flex-direction: column; align-items: center; gap: 7px; }
+.ob__pdot { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; }
+.ob__pdot[data-on="true"] { background: var(--brand-yellow); color: var(--ink); }
+.ob__pdot[data-on="false"] { background: var(--gray-100); color: var(--gray-300); box-shadow: inset 0 0 0 2px var(--gray-200); }
+.ob__plbl { font-size: 10px; font-weight: 700; color: var(--gray-400); }
+
+/* interests */
+.ob__chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+.ob__chip {
+  padding: 11px 16px; border-radius: 999px; font-size: 14px; font-weight: 700;
+  background: var(--paper-off); color: var(--gray-700); border: 2px solid transparent; transition: .14s;
+}
+.ob__chip[data-on="true"] { background: var(--brand-yellow); color: var(--ink); border-color: var(--ink); }
+
+/* notification opt-in (ready) */
+.ob__optin {
+  display: flex; align-items: center; gap: 13px; margin-top: 24px; padding: 16px;
+  background: #FFF9E1; border-radius: var(--r-md);
+}
+.ob__optin__ic { width: 40px; height: 40px; border-radius: 12px; background: #fff; display: grid; place-items: center; color: var(--brand-yellow-deep); flex: none; }
+.ob__optin__tx { flex: 1; }
+.ob__optin__tx b { font-size: 14px; font-weight: 800; display: block; }
+.ob__optin__tx span { font-size: 12.5px; color: var(--gray-500); }
+.ob__toggle { width: 46px; height: 27px; border-radius: 999px; background: var(--success); position: relative; flex: none; }
+.ob__toggle::after { content: ''; position: absolute; top: 3px; right: 3px; width: 21px; height: 21px; border-radius: 50%; background: #fff; }
+
+/* footer / CTA */
+.ob__foot { flex: none; padding-top: 20px; }
+.ob__cta {
+  width: 100%; height: 58px; border-radius: 18px; background: var(--ink); color: #fff;
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  font-size: 16px; font-weight: 800; letter-spacing: -.01em; transition: transform .12s;
+}
+.ob__cta:active { transform: scale(.985); }
+.ob__cta:disabled { background: var(--gray-200); color: var(--gray-400); }
+.ob__sub { text-align: center; font-size: 13.5px; color: var(--gray-500); margin-top: 14px; font-weight: 600; }
+.ob__sub b { color: var(--ink); }

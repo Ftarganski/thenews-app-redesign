@@ -1,11 +1,12 @@
 import { useState } from 'react'
+import Onboarding from './screens/Onboarding.jsx'
 import Habito from './screens/Habito.jsx'
 import Leitura from './screens/Leitura.jsx'
 import Decisoes from './Decisoes.jsx'
 import { Logo } from './Logo.jsx'
 import { SCREENS } from './content.js'
 
-const DEFAULT_STATE = { habito: 'active', leitura: 'topo' }
+const DEFAULT_STATE = { onboarding: 'welcome', habito: 'active', leitura: 'topo' }
 
 export default function App() {
   const [view, setView] = useState('proto')
@@ -16,17 +17,19 @@ export default function App() {
   const current = SCREENS[screen]
   const activeState = current.states.find(s => s.id === state) ?? current.states[0]
 
-  // fluxo conectado: CTA de ler → Leitura; recompensa → Hábito (done)
+  // fluxo conectado: onboarding → 1ª leitura; CTA de ler → Leitura; recompensa → Hábito (done)
   const onRead = () => go('leitura', 'lendo')
+  const onFirstRead = () => go('leitura', 'topo')
   const onHabits = () => go('habito', 'done')
 
   return (
     <div className="shell">
       <header className="shell__head">
         <Logo size={22} className="shell__brandmark" />
-        <h1 className="shell__title">App Redesign — Hábito & Leitura</h1>
+        <h1 className="shell__title">App Redesign — Onboarding · Hábito · Leitura</h1>
         <p className="shell__sub">
-          Duas telas redesenhadas para fechar o loop de retenção: <strong>ler a edição passa a avançar a sequência automaticamente</strong>.
+          Telas redesenhadas para fechar o loop de retenção: <strong>ler a edição passa a avançar a sequência automaticamente</strong>.
+          O <strong>Onboarding</strong> entra como bônus, completando o funil — de quem chega até a primeira leitura.
           Cada estado vem com o problema que resolve e os princípios de CX e design que sustentam a decisão.
         </p>
         <div className="viewtabs">
@@ -58,7 +61,9 @@ export default function App() {
       <div className="stage">
         <div className="phone">
           <div className="phone__notch" />
-          {screen === 'habito'
+          {screen === 'onboarding'
+            ? <Onboarding variant={state} onStep={setState} onRead={onFirstRead} />
+            : screen === 'habito'
             ? <Habito variant={state} onRead={onRead} />
             : <Leitura variant={state} onHabits={onHabits} />}
         </div>
